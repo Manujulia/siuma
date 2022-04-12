@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+/*navbar*/
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(255, 255, 255);
+    height: 50px;
+}
+
+.brand-title {
+    font-size: 3rem;
+    margin:20px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+}
+.brand-title-a:visited , .brand-title-a:link, .brand-title-a:active {
+    text-decoration: none;
+    color:rgb(0, 0, 0)
+}
+
+.navbar-links ul {
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    display:flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    display:block;
+}
+
+.navbar-links li:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.dropdown{
+    display:none;
+}
+
+/*footer*/
+.footer {
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+   
+    background-color: rgb(255, 255, 255);
+    color:white;
+    align-items: center;
+}
+
+.socialmedia-buttons {
+    display: flex;
+    width:200px;
+    height: 50px;
+    align-items: right;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.facebook , .instagram, .whatsapp {
+    height: 25px;
+}
+
+.contact-me ul{
+    margin:0;
+    padding:0;
+    display:flex;
+    list-style: none;
+}
+
+.contact-me li{
+    font-size: small;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-family: 'Noto Serif', serif;
+}
+.contact-me-contenedor{
+    background-color: beige;
+    
+}
+
+/*cuerpo*/
+.titulo-inicio{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 50px;
+    font-weight: 400;
+}
+.cuerpo-inicio{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(2);
+}
+
+.imagen-indice-contenedor{
+    width:100%;
+    grid-column:span 2;
+    border-bottom: 2px solid black;
+}
+
+.imagen-indice{
+    width:100%;
+}
+
+.imagen-acerca-de-mi{
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    height:600px;
+}
+.imagen-acerca-de-mi img{
+    
+    width:600px;
+    height:600px;
+
+}
+.acerca-de-mi-texto{
+    height:600px;
+    padding-top:100px;
+    padding-right:150px;
+    margin-bottom: 150px;
+}
+.titulo-indice{
+    text-align: right;
+    text-decoration: overline 2px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 4vw;
+    font-weight: 400;
+}
+.parrafo-indice{
+    font-size: 1vw;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 70px;
+    text-align: justify;
+    padding-bottom: 100px;
+}
+@media screen and (max-width:1500px){
+
+    .parrafo-indice{
+        font-size: 1.2vw;
+    }
+    .imagen-acerca-de-mi{
+
+        width:600px;
+        height:600px;
+    }
+}
+
+@media screen and (max-width:1200px){
+    .titulo-inicio{
+        font-size: 6vw;
+    }
+    .cuerpo-inicio{
+        display:grid;
+        grid-template-columns:repeat(1,1fr);
+        grid-template-rows:repeat(2);
+    }
+
+    .imagen-acerca-de-mi{
+        display:none;
+    }
+    .acerca-de-mi-texto{
+        padding:60px;
+    }
+    .titulo-indice{
+        text-align: center;
+        font-size: 6vw;
+    }
+
+    .parrafo-indice{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    .cuerpo-inicio{
+        display: block;
+    }
+    .navbar-links li{
+        display: none;
+    }
+    .titulo-inicio{
+        font-size: 7vw;
+    }
+    .titulo-indice{
+        text-align: center;
+        font-size: 10vw;
+    }
+    .parrafo-indice{
+        font-size: 4vw;
+        padding-top: 50px;
+    }
+    .dropdown{
+        display:block;
+        padding-right: 20px;
+        color:rgb(0, 0, 0)
+    }
+    .imagen-indice-contenedor{
+        display: none;
+    }
+
+    .imagen-acerca-de-mi{
+        display:block;
+        width:100%;
+        padding-bottom: 0;
+    }
+    .imagen-acerca-de-mi img{
+        width:100%;
+        height:auto;
+    }
+    /*
+    .imagen-acerca-de-mi{
+        display:flex;
+        width:100%
+        height:350px;
+    }
+    .imagen-acerca-de-mi img{
+        padding:0;
+        border:2px solid black;
+        height:200px;
+        width:200px;
+    }
+    */
+    .acerca-de-mi-texto{
+        padding-top:0;
+        padding-bottom: 0;
+        height:1000px;
+        margin-top: 5px;
+    }
+    .contact-me li{
+        font-size: xx-small;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

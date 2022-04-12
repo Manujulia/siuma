@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+/*navbar*/
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(255, 255, 255);
+    height: 50px;
+}
+
+.brand-title {
+    font-size: 3rem;
+    margin:20px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+}
+.brand-title-a:visited , .brand-title-a:link, .brand-title-a:active {
+    text-decoration: none;
+    color:rgb(0, 0, 0)
+}
+
+.navbar-links ul {
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    display:flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    display:block;
+}
+
+.navbar-links li:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.dropdown{
+    display:none;
+}
+
+/*footer*/
+.footer {
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+   
+    background-color: rgb(255, 255, 255);
+    color:white;
+    align-items: center;
+}
+
+.socialmedia-buttons {
+    display: flex;
+    width:200px;
+    height: 50px;
+    align-items: right;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.facebook , .instagram, .whatsapp {
+    height: 25px;
+}
+
+.contact-me ul{
+    margin:0;
+    padding:0;
+    display:flex;
+    list-style: none;
+}
+
+.contact-me li{
+    font-size: small;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-family: 'Noto Serif', serif;
+}
+.contact-me-contenedor{
+    background-color: beige;
+    
+}
+/*cuerpo*/
+.titulo-acerca-de-mi{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 50px;
+    font-weight: 400;
+}
+.cuerpo-about-me{
+    padding-top: 100px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,600px);
+    justify-content: center;
+}
+
+.titulo1{
+    text-align: right;
+    font-size: 70px;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+
+}
+.texto-about-me1{
+    grid-column: span 2;
+}
+.texto-about-me2{
+    grid-column: span 2;
+}
+.titulo2{
+    text-align: left;
+    font-size: 70px;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+}
+
+.parrafo1{
+    padding-top: 50px;
+    text-justify: justify;
+    font-size: 1.5vw;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+}
+.image-about-me1 {
+    display: flex;
+    justify-content: center;
+}
+.image-about-me2 {
+    display: flex;
+    justify-content: center;
+}
+.image-about-me1 img{
+    height:400px;
+    border-radius: 10px;
+}
+.image-about-me2 img{
+    height:400px;
+    border-radius: 10px;
+}
+.parrafo2{
+    padding-top: 50px;
+    text-justify: justify;
+    font-size: 1.5vw;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+}
+
+@media screen and (max-width:1200px){
+    .parrafo1{
+        font-size: 2vw;
+        padding-left: 20px;
+    }
+    .parrafo2{
+        font-size: 2vw;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width:900px){
+    .titulo-acerca-de-mi{
+        font-size: 70px;
+    }
+    .titulo1{
+        font-size: 45px;
+    }
+    .titulo2{
+        font-size: 45px;
+    }
+    .parrafo1{
+        font-size: 2.3vw;
+
+    }
+    .parrafo2{
+        font-size: 2.3vw;
+
+    }
+}
+
+@media screen and (max-width:650px){
+    .cuerpo-about-me{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        padding-top: 0px;
+    }
+    .titulo-acerca-de-mi{
+        font-size: 50px;
+        padding-bottom: 20px;
+    }
+    .image-about-me1{
+        height:300px;
+    }
+    .image-about-me2{
+        margin-bottom:200px;
+        height:300px;
+    }
+    .navbar-links ul{
+        display: none;
+    }
+    .texto-about-me1{
+        width: 100%;
+        margin-top: 100px;
+    }
+    .titulo1{
+        text-align: center;
+        font-size: 40px;
+        padding: 30px;
+    }
+    .titulo2{
+        text-align: center;
+        font-size: 40px;
+        padding: 30px;
+    }
+    .dropdown{
+        display:block;
+        padding-right: 20px;
+        color:rgb(0, 0, 0)
+    }
+    .contact-me li{
+        font-size: xx-small;
+    }
+    .parrafo1{
+        font-size: 3vw;
+        padding: 30px;
+    }
+    .parrafo2{
+        font-size: 3vw;
+        padding: 30px;
+    }
+}

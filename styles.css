@@ -14,7 +14,7 @@
 }
 
 .brand-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin:20px;
     font-family: 'Noto Serif', serif;
     font-weight: 500;
@@ -228,19 +228,7 @@
         width:100%;
         height:auto;
     }
-    /*
-    .imagen-acerca-de-mi{
-        display:flex;
-        width:100%
-        height:350px;
-    }
-    .imagen-acerca-de-mi img{
-        padding:0;
-        border:2px solid black;
-        height:200px;
-        width:200px;
-    }
-    */
+    
     .acerca-de-mi-texto{
         padding-top:0;
         padding-bottom: 0;
@@ -250,22 +238,481 @@
     .contact-me li{
         font-size: xx-small;
     }
+   
+}
+
+
+
+/* ------------------------------------------------- ABOUT ME ------------------------------------------------------------------------- */
+
+/*cuerpo*/
+.titulo-acerca-de-mi{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 50px;
+    font-weight: 400;
+}
+.cuerpo-about-me{
+    padding-top: 100px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,600px);
+    justify-content: center;
+}
+
+.titulo1{
+    text-align: right;
+    font-size: 70px;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+
+}
+.texto-about-me1{
+    grid-column: span 2;
+}
+.texto-about-me2{
+    grid-column: span 2;
+}
+.titulo2{
+    text-align: left;
+    font-size: 70px;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+}
+
+.parrafo1{
+    padding-top: 50px;
+    text-justify: justify;
+    font-size: 1.5vw;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+}
+.image-about-me1 {
+    display: flex;
+    justify-content: center;
+}
+.image-about-me2 {
+    display: flex;
+    justify-content: center;
+}
+.image-about-me1 img{
+    height:400px;
+    border-radius: 10px;
+}
+.image-about-me2 img{
+    height:400px;
+    border-radius: 10px;
+}
+.parrafo2{
+    padding-top: 50px;
+    text-justify: justify;
+    font-size: 1.5vw;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+}
+
+@media screen and (max-width:1200px){
+    .parrafo1{
+        font-size: 2vw;
+        padding-left: 20px;
+    }
+    .parrafo2{
+        font-size: 2vw;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width:900px){
+    .titulo-acerca-de-mi{
+        font-size: 70px;
+    }
+    .titulo1{
+        font-size: 45px;
+    }
+    .titulo2{
+        font-size: 45px;
+    }
+    .parrafo1{
+        font-size: 2.3vw;
+
+    }
+    .parrafo2{
+        font-size: 2.3vw;
+
+    }
+}
+
+@media screen and (max-width:650px){
+    .cuerpo-about-me{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        padding-top: 0px;
+    }
+    .titulo-acerca-de-mi{
+        font-size: 50px;
+        padding-bottom: 20px;
+    }
+    .image-about-me1{
+        height:300px;
+    }
+    .image-about-me2{
+        margin-bottom:200px;
+        height:300px;
+    }
+    .navbar-links ul{
+        display: none;
+    }
+    .texto-about-me1{
+        width: 100%;
+        margin-top: 100px;
+    }
+    .titulo1{
+        text-align: center;
+        font-size: 40px;
+        padding: 30px;
+    }
+    .titulo2{
+        text-align: center;
+        font-size: 40px;
+        padding: 30px;
+    }
+    .dropdown{
+        display:block;
+        padding-right: 20px;
+        color:rgb(0, 0, 0)
+    }
+    .contact-me li{
+        font-size: xx-small;
+    }
+    .parrafo1{
+        font-size: 3vw;
+        padding: 30px;
+    }
+    .parrafo2{
+        font-size: 3vw;
+        padding: 30px;
+    }
+}
+
+/* ------------------------------------------------- GALERIA ------------------------------------------------------------------------- */
+
+/* cuerpo */
+.titulo-galeria{
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    font-size: 100px;
+    font-weight:400;
+    padding-top: 50px;
+    padding-bottom:50px;
+}
+.cuerpo-galeria{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: auto;
+    align-items:center;
+    justify-content: space-evenly;
+    justify-items: center;
+    row-gap: 100px;
+    padding-bottom:100px;
+}
+
+.imagen-galeria-div{
+    display:flex;
+    height:300px;
+    width:300px;
+    justify-content:center;
+    border:2px solid black;
+}
+.imagen-galeria-div img{
+    justify-items: center;
+    height:100%;
+}
+.dropdown{
+    display:none;
+}
+
+@media screen and (max-width:1200px){
+    .cuerpo-galeria{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows: auto;
+        align-items:center;
+        justify-content: space-evenly;
+        justify-items: center;
+        row-gap: 100px;
+        padding-bottom:100px;
+    }
+}
+
+@media screen and (max-width:900px){
+    .cuerpo-galeria{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows: auto;
+        align-items:center;
+        justify-content: space-evenly;
+        justify-items: center;
+        row-gap: 100px;
+        padding-bottom:100px;
+    }
+    .contact-me li{
+        font-size: xx-small;
+    }
+}
+
+@media screen and (max-width:600px){
+    .cuerpo-galeria{
+        display:grid;
+        grid-template-columns:repeat(1,1fr);
+        grid-template-rows: auto;
+        align-items:center;
+        justify-content: space-evenly;
+        justify-items: center;
+        row-gap: 100px;
+        padding-bottom:100px;
+    }
+    .navbar-links ul{
+        display: none;
+    }
+    .dropdown{
+        display:block;
+        padding-right: 20px;
+        color:rgb(0, 0, 0)
+    }
+}
+
+/* ------------------------------------------------- CONTACTAME ------------------------------------------------------------------------- */
+
+/*cuerpo*/
+.titulo-contactame{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 50px;
+    font-weight: 400;
+}
+.cuerpo-contactame{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.contact-me-contenedor{
+    background-color: rgb(248, 217, 160);
+    height:500px;
+    border-radius: 10px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+.titulo-informacion{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    padding-bottom:30px;
+    padding-top:30px;
+}
+.field{
+    width:80%;
+    padding:20px;
+    font-size: medium;
+    font-family: 'Questrial', sans-serif;
+    border-radius: 10px;
+}
+
+.field2{
+    width: 80%;
+    padding-top: 50px;
+    margin-top:50px;
+    margin-bottom:30px;
+    font-size: medium;
+    font-family: 'Questrial', sans-serif;
+    border-radius: 10px;
+}
+
+.button{
+    font-family: 'Questrial', sans-serif;
+    font-size: 30px;
+    border-radius: 10px;
+    width:21%;
+}
+
+@media screen and (max-width:1200px){
+    .titulo-contactame{
+        font-size: 70px;
+    }
+}
+@media screen and (max-width:600px){
+    .titulo-informacion{
+        font-size: 30px;
+    }
+    .titulo-contactame{
+        font-size: 50px;
+    }
+    .navbar-links ul{
+        display: none;
+    }
+    .dropdown{
+        display:block;
+        padding-right: 20px;
+        color:rgb(0, 0, 0)
+    }
 }
 
 
 
 
+/* ------------------------------------------------- Diseno 1 ------------------------------------------------------------------------- */
 
 
+.titulo-d1{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 50px;
+    padding-bottom:50px;
+    font-weight: 400;
+}
+.imagend1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.imagen-d1 img{
+    width:100%;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.titulo2-d1{
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 50px;
+    font-weight: 400;
+}
 
+.parrafo-d1{
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Questrial', sans-serif;
+    padding: 100px;
+    text-align: justify;
+}
 
+@media screen and (max-width:1200px){
+    .titulo-d1{
+        font-size: 70px;
+    }
+    .titulo2-d1{
+        font-size: 70px;
+    }
+    .parrafo-d1{
+        font-size: 3vw;
+    }
+}
 
+@media screen and (max-width:650px){
+    .imagen-d1 img{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .titulo-d1{
+        font-size: 50px;
+    }
+    .titulo2-d1{
+        font-size: 50px;
+        padding-bottom: 20px;
+    }
+    .parrafo-d1{
+        font-size: 5vw;
+        padding:20px;
+        margin-bottom: 50px;
+    }
+    .navbar-links ul{
+        display:none;
+    }
+    .contact-me li{
+        font-size: xx-small;
+    }
+    .dropdown{
+        display:block;
+        padding-right: 20px;
+        color:rgb(0, 0, 0)
+    }
+}
 
+/* ------------------------------------------------- Diseno 2 ------------------------------------------------------------------------- */
 
+#navbarboot {
+    font-family: 'Questrial', sans-serif;
+}
 
+#titulo1boot {
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 50px;
+    padding-bottom:50px;
+    font-weight: 400;
+}
 
+#imagen1-boot {
+    padding-left: 100px;
+    padding-right: 100px;
+}
 
+#titulo2boot {
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 50px;
+    padding-bottom:50px;
+    font-weight: 400;
+}
+#titulo3boot {
+    text-align: right;
+    font-size: 2.3rem;
+    font-family: 'Questrial', sans-serif;
+    padding-bottom:50px;
+    font-weight: 400;
+}
+#parrafo-boot {
+    font-family: 'Questrial', sans-serif;
+    text-align: justify;
+    font-size: 2rem;
+}
+#contenedor-boot{
+    padding-bottom: 200px;
+}
+@media screen and (max-width:900px){
+    #parrafo-boot {
+        font-size: 1.5rem;
+    }
+}    
+@media screen and (max-width:600px){
 
+    #imagen1-boot {
+        padding: 0;
+    }
+    #imagen2-boot {
+        padding-bottom: 100px;
+    }
+    #parrafo-boot {
+        font-size: 2rem;
+    }
+    #titulo3boot {
+        text-align: center;
+        padding-bottom:50px;
+    }
 
-
+}

@@ -1,3 +1,4 @@
+/*------Esta primera parte aplica a todo el documento (navbar/footer) -------*/
 * {
     box-sizing: border-box;
     margin:0;
@@ -95,7 +96,7 @@
     background-color: beige;
     
 }
-
+/*---------------------------------index-----------------------------------------*/
 /*cuerpo*/
 .titulo-inicio{
     text-align: center;
@@ -106,63 +107,97 @@
 }
 .cuerpo-inicio{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    grid-template-rows:repeat(2);
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(2,auto);
+    justify-items: center;
+    align-items: center;
+    
 }
 
 .imagen-indice-contenedor{
+    display: flex;
+    justify-content: center;
     width:100%;
-    grid-column:span 2;
-    border-bottom: 2px solid black;
+    grid-column:span 3;  
+    width:90%;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    border: black 2px solid;
 }
 
 .imagen-indice{
     width:100%;
+    padding:20px;
+    border-radius: 30px;
+    
 }
 
 .imagen-acerca-de-mi{
     display: flex;
-    width:100%;
+    width:23vw;
     align-items: center;
     justify-content: center;
-    height:600px;
+    height:400px;
+    border-radius: 20px;
+    margin-bottom: 150px;
+    
+    border-left: 2px solid #292E49;
+    border-bottom: 2px solid #292E49;
 }
 .imagen-acerca-de-mi img{
     
-    width:600px;
-    height:600px;
+    width:200px;
+    height:200px;
+    border-radius: 20px;
+    margin-top: 150px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    border:2px #292E49 solid;
+}
+.imagen-acerca-de-mi:hover img{
+    transform: scale(1.25);
 
 }
-.acerca-de-mi-texto{
-    height:600px;
-    padding-top:100px;
-    padding-right:150px;
+.acerca-de-mi-texto {
+    height:400px;
+    border-radius: 30px;
+    width: 56vw;
+    grid-column:span 2;
     margin-bottom: 150px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
 }
 .titulo-indice{
-    text-align: right;
-    text-decoration: overline 2px;
+    text-align: left;
     font-family: 'Questrial', sans-serif;
-    font-size: 4vw;
-    font-weight: 400;
+    font-size: 2.5vw;
+    font-weight: 600;
+    padding: 30px;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e74c3c, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e74c3c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color:transparent;
 }
 .parrafo-indice{
-    font-size: 1vw;
+    font-size: 1.1vw;
     font-family: 'Questrial', sans-serif;
-    padding-top: 70px;
+
     text-align: justify;
-    padding-bottom: 100px;
+    padding:30px;
+    
 }
+
 @media screen and (max-width:1500px){
 
     .parrafo-indice{
-        font-size: 1.2vw;
+        font-size: 1.3vw;
     }
-    .imagen-acerca-de-mi{
 
-        width:600px;
-        height:600px;
-    }
 }
 
 @media screen and (max-width:1200px){
@@ -180,10 +215,12 @@
     }
     .acerca-de-mi-texto{
         padding:60px;
+        height: auto;
+        width:90%;
     }
     .titulo-indice{
         text-align: center;
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .parrafo-indice{
@@ -194,13 +231,16 @@
 @media screen and (max-width:600px){
 
     .cuerpo-inicio{
-        display: block;
+        display: grid;
+        grid-template-columns: (1);
+        grid-template-rows: auto;
     }
     .navbar-links li{
         display: none;
     }
     .titulo-inicio{
         font-size: 7vw;
+        margin-bottom: 100px;
     }
     .titulo-indice{
         text-align: center;
@@ -220,23 +260,22 @@
     }
 
     .imagen-acerca-de-mi{
-        display:block;
-        width:100%;
-        padding-bottom: 0;
+        display:flex;
+        width:90%;
     }
     .imagen-acerca-de-mi img{
-        width:100%;
+        width:50%;
         height:auto;
     }
     
     .acerca-de-mi-texto{
-        padding-top:0;
-        padding-bottom: 0;
-        height:1000px;
-        margin-top: 5px;
+        padding: 0;
     }
     .contact-me li{
         font-size: xx-small;
+    }
+    .texto-about-me2{
+        padding-left: 0;
     }
    
 }
@@ -253,12 +292,19 @@
     padding-top: 50px;
     font-weight: 400;
 }
+.cuerpo-acerca-de-mi{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
 .cuerpo-about-me{
     padding-top: 100px;
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,600px);
+    grid-template-rows: repeat(2);
     justify-content: center;
+    width: 90%;
+    justify-items: center;
 }
 
 .titulo1{
@@ -266,14 +312,24 @@
     font-size: 70px;
     font-family: 'Questrial', sans-serif;
     font-weight: 400;
-
+    padding: 20px;
 }
 .texto-about-me1{
     grid-column: span 2;
+    padding: 20px;
+    border: 2px black solid;
+    height: 450px;
+    border-radius: 20px;
 }
 .texto-about-me2{
     grid-column: span 2;
+    height:450px;
+    border: black 2px solid;
+    border-radius: 20px;
+    margin-left: 35px;
+    margin-top: 50px;
 }
+
 .titulo2{
     text-align: left;
     font-size: 70px;
@@ -284,7 +340,7 @@
 .parrafo1{
     padding-top: 50px;
     text-justify: justify;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     font-family: 'Questrial', sans-serif;
     font-weight: 400;
     text-align: justify;
@@ -292,21 +348,34 @@
 .image-about-me1 {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 450px;
+    border-radius: 20px;
+    border: black 2px solid;
+    width: 25vw;
+    
 }
 .image-about-me2 {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 450px;
+    border-radius: 20px;
+    border: black 2px solid;
+    width: 25vw;
+    margin-left: 45px;
+    margin-top: 50px;
 }
 .image-about-me1 img{
-    height:400px;
+    height:350px;
     border-radius: 10px;
 }
 .image-about-me2 img{
-    height:400px;
+    height:350px;
     border-radius: 10px;
 }
 .parrafo2{
-    padding-top: 50px;
+    padding: 20px;
     text-justify: justify;
     font-size: 1.5vw;
     font-family: 'Questrial', sans-serif;
@@ -369,6 +438,7 @@
     .texto-about-me1{
         width: 100%;
         margin-top: 100px;
+        padding-right: 0;
     }
     .titulo1{
         text-align: center;
@@ -426,10 +496,17 @@
     width:300px;
     justify-content:center;
     border:2px solid black;
+    border-radius: 10px;
 }
 .imagen-galeria-div img{
     justify-items: center;
+    border-radius: 8px;
     height:100%;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.imagen-galeria-div:hover img{
+    transform: scale(1.25);
 }
 .dropdown{
     display:none;

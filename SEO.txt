@@ -1,0 +1,5 @@
+Implementacion de SEO:
+
+Todas las imágenes en mi sitio fueron uplodeadas en modo comprimido (20)
+Todos los títulos del html fueron cambiados a algo más apropiado para SEO (5).
+Un Meta Tag con key words(diseño, arte, etc) fue agregado a todos los html del documento (5)

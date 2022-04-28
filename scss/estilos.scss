@@ -6,6 +6,11 @@
 }
 @import "utilities/_variables.scss";
 
+@mixin sizes ($width,$height) {
+    heigth:$height;
+    width: $width;
+}
+
 /*navbar*/
 .navbar{
     display:flex;
@@ -277,11 +282,7 @@
 
 /*cuerpo*/
 .titulo-acerca-de-mi{
-    text-align: center;
-    font-size: 100px;
-    font-family: 'Questrial', sans-serif;
-    padding-top: 50px;
-    font-weight: 400;
+    @extend .titulo-inicio;
 }
 .cuerpo-acerca-de-mi{
     width:100%;
@@ -463,10 +464,7 @@
 
 /* cuerpo */
 .titulo-galeria{
-    font-family: 'Questrial', sans-serif;
-    text-align: center;
-    font-size: 100px;
-    font-weight:400;
+    @extend .titulo-inicio;
     padding-top: 50px;
     padding-bottom:50px;
 }
@@ -481,8 +479,7 @@
     padding-bottom:100px;
     .imagen-galeria-div{
         display:flex;
-        height:300px;
-        width:300px;
+        @include sizes(300px,300px)
         justify-content:center;
         border:2px solid black;
         border-radius: 10px;
@@ -554,22 +551,18 @@
 
 /*cuerpo*/
 .titulo-contactame{
-    text-align: center;
-    font-size: 100px;
-    font-family: 'Questrial', sans-serif;
-    padding-top: 50px;
-    font-weight: 400;
+    @extend .titulo-inicio;
 }
 .cuerpo-contactame{
     width:100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    align-items: map-get($estilos,centro);
+    justify-content: map-get($estilos,centro);
+    justify-items: map-get($estilos,centro);
 }
 .contact-me-contenedor{
-    background-color: rgb(248, 217, 160);
+    background-color: map-get($estilos, color );
     height:500px;
     border-radius: 10px;
     max-width: 1000px;

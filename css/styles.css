@@ -4,38 +4,6 @@
   margin: 0;
   padding: 0; }
 
-/*navbar*/
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  height: 50px; }
-  .navbar .brand-title {
-    font-size: 2.5rem;
-    margin: 20px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500; }
-  .navbar .brand-title-a:visited, .navbar .brand-title-a:link, .navbar .brand-title-a:active {
-    text-decoration: none;
-    color: black; }
-  .navbar .navbar-links ul {
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    display: flex; }
-  .navbar .navbar-links li {
-    list-style: none; }
-    .navbar .navbar-links li:hover {
-      background-color: #e0e0e0; }
-  .navbar .navbar-links li a {
-    text-decoration: none;
-    color: black;
-    padding: 1rem;
-    display: block; }
-
-.dropdown {
-  display: none; }
-
 /*footer*/
 .footer {
   position: fixed;
@@ -146,54 +114,58 @@
     -webkit-text-fill-color: transparent;
     -mo-text-fill-color: transparent; }
   .cuerpo-inicio .parrafo-indice {
-    font-size: 1.1vw;
+    font-size: 0.9vw;
     font-family: 'Questrial', sans-serif;
     text-align: justify;
     padding: 30px; }
 
-@media screen and (max-width: 1500px) {
-  .parrafo-indice {
-    font-size: 1.3vw; } }
 
 @media screen and (max-width: 1200px) {
   .titulo-inicio {
     font-size: 6vw; }
-  .cuerpo-inicio {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2); }
   .imagen-acerca-de-mi {
     display: none; }
   .acerca-de-mi-texto {
-    padding: 60px;
     height: auto;
-    width: 90%; }
+    width: 90%;}
   .titulo-indice {
     text-align: center;
     font-size: 5vw; }
-  .parrafo-indice {
-    font-size: 3vw; } }
+  .cuerpo-inicio .parrafo-indice{
+    font-size: 1.3vw;
+  }}
+
+@media screen and (max-width:900px) {
+  .cuerpo-inicio .parrafo-indice{
+    font-size: 2.5vw;
+    padding-bottom: 200px;
+  }
+  .cuerpo-inicio .imagen-acerca-de-mi{
+    display: none;
+  }
+  .cuerpo-inicio .acerca-de-mi-texto {
+    grid-column: span 3;
+    width: 90%;
+    border: none;
+    
+    }
+  .cuerpo-inicio .titulo-indice {
+    text-align: center;
+    font-size: 7vw; }}
+
 
 @media screen and (max-width: 600px) {
-  .cuerpo-inicio {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: auto; }
   .navbar-links li {
     display: none; }
-  .titulo-inicio {
+  .cuerpo-inicio .titulo-inicio {
     font-size: 7vw;
     margin-bottom: 100px; }
-  .titulo-indice {
+  .cuerpo-inicio .titulo-indice {
     text-align: center;
-    font-size: 10vw; }
-  .parrafo-indice {
-    font-size: 4vw;
-    padding-top: 50px; }
-  .dropdown {
-    display: block;
-    padding-right: 20px;
-    color: black; }
+    font-size: 7vw; }
+  .cuerpo-inicio .parrafo-indice {
+    font-size: 2.8vw;
+     }
   .imagen-indice-contenedor {
     display: none; }
   .imagen-acerca-de-mi {
@@ -208,6 +180,9 @@
     font-size: xx-small; }
   .texto-about-me2 {
     padding-left: 0; } }
+  .footer .contact-me li {
+    font-size: xx-small;
+  }
 
 /* ------------------------------------------------- ABOUT ME ------------------------------------------------------------------------- */
 /*cuerpo*/
@@ -237,11 +212,11 @@
   font-size: 70px;
   font-family: 'Questrial', sans-serif;
   font-weight: 400;
-  padding: 20px; }
+  padding: 10px; }
 
 .texto-about-me1 {
   grid-column: span 2;
-  padding: 20px;
+  padding: 10px;
   border: 2px black solid;
   height: 450px;
   border-radius: 20px; }
@@ -252,18 +227,21 @@
   border: black 2px solid;
   border-radius: 20px;
   margin-left: 35px;
-  margin-top: 50px; }
+  margin-top: 50px; 
+  margin-bottom: 100px;
+}
 
 .titulo2 {
   text-align: left;
   font-size: 70px;
   font-family: 'Questrial', sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  padding: 20px;}
 
 .parrafo1 {
   padding-top: 50px;
   text-justify: justify;
-  font-size: 1.4vw;
+  font-size: 1vw;
   font-family: 'Questrial', sans-serif;
   font-weight: 400;
   text-align: justify; }
@@ -299,17 +277,17 @@
 .parrafo2 {
   padding: 20px;
   text-justify: justify;
-  font-size: 1.5vw;
+  font-size: 1vw;
   font-family: 'Questrial', sans-serif;
   font-weight: 400;
   text-align: justify; }
 
 @media screen and (max-width: 1200px) {
   .parrafo1 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding-left: 20px; }
   .parrafo2 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding-right: 20px; } }
 
 @media screen and (max-width: 900px) {
@@ -320,9 +298,22 @@
   .titulo2 {
     font-size: 45px; }
   .parrafo1 {
-    font-size: 2.3vw; }
+    font-size: 2.2vw; }
   .parrafo2 {
-    font-size: 2.3vw; } }
+    font-size: 2.2vw; } 
+  .image-about-me1  {
+    display: none; }
+    
+  .image-about-me2 {
+    display: none; }
+  .texto-about-me2 {
+    grid-column: span 3;
+    margin-left: 0;
+  }
+  .texto-about-me1 {
+    grid-column: span 3;
+  }
+}
 
 @media screen and (max-width: 650px) {
   .cuerpo-about-me {
@@ -352,17 +343,13 @@
     text-align: center;
     font-size: 40px;
     padding: 30px; }
-  .dropdown {
-    display: block;
-    padding-right: 20px;
-    color: black; }
   .contact-me li {
     font-size: xx-small; }
   .parrafo1 {
-    font-size: 3vw;
+    font-size: 2.5vw;
     padding: 30px; }
   .parrafo2 {
-    font-size: 3vw;
+    font-size: 2.5vw;
     padding: 30px; } }
 
 /* ------------------------------------------------- GALERIA ------------------------------------------------------------------------- */
@@ -509,11 +496,10 @@
     font-size: 50px; }
   .navbar-links ul {
     display: none; }
-  .dropdown {
-    display: block;
-    padding-right: 20px;
-    color: black; } }
-
+  .button{
+    margin-top: 50px;
+  }
+}
 /* ------------------------------------------------- Diseno 1 ------------------------------------------------------------------------- */
 .titulo-d1 {
   text-align: center;
@@ -578,55 +564,4 @@
     display: block;
     padding-right: 20px;
     color: black; } }
-
-/* ------------------------------------------------- Diseno 2 ------------------------------------------------------------------------- */
-#navbarboot {
-  font-family: 'Questrial', sans-serif; }
-
-#titulo1boot {
-  text-align: center;
-  font-family: 'Questrial', sans-serif;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  font-weight: 400; }
-
-#imagen1-boot {
-  padding-left: 100px;
-  padding-right: 100px; }
-
-#titulo2boot {
-  text-align: center;
-  font-family: 'Questrial', sans-serif;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  font-weight: 400; }
-
-#titulo3boot {
-  text-align: right;
-  font-size: 2.3rem;
-  font-family: 'Questrial', sans-serif;
-  padding-bottom: 50px;
-  font-weight: 400; }
-
-#parrafo-boot {
-  font-family: 'Questrial', sans-serif;
-  text-align: justify;
-  font-size: 2rem; }
-
-#contenedor-boot {
-  padding-bottom: 200px; }
-
-@media screen and (max-width: 900px) {
-  #parrafo-boot {
-    font-size: 1.5rem; } }
-
-@media screen and (max-width: 600px) {
-  #imagen1-boot {
-    padding: 0; }
-  #imagen2-boot {
-    padding-bottom: 100px; }
-  #parrafo-boot {
-    font-size: 2rem; }
-  #titulo3boot {
-    text-align: center;
-    padding-bottom: 50px; } }
+  }
